@@ -1,0 +1,36 @@
+<query-editor-row query-ctrl="ctrl" class="generic-datasource-query-row" has-text-edit-mode="false">
+  <div class="gf-form-inline">
+    <div class="gf-form">
+      <label class="gf-form-label query-keyword width-7">Timeseries ID</label>
+      <gf-form-dropdown model="ctrl.target.target"
+        allow-custom="true"
+        lookup-text="true"
+        get-options="ctrl.getMetricList()"
+        segment="segment"
+        on-change="ctrl.onChangeInternal(ctrl.target.target)">
+      </gf-form-dropdown>
+    </div>
+    <div class="gf-form">
+      <label class="gf-form-label query-keyword width-7">Aggregations</label>
+      <div class="gf-form-select-wrapper">
+        <select class="gf-form-input"
+          ng-model="ctrl.target.aggregation"
+          lookup-text="true"
+          ng-options="c for c in ctrl.target.detail.aggregationTypes"
+          ng-change="ctrl.onChangeInternal(ctrl.target.target)">
+        </select>
+      </div>
+    </div>
+    <div class="gf-form">
+      <label class="gf-form-label width-6 query-keyword">Filter</label>
+      <input type="text" class="gf-form-input max-width-18"
+        ng-model='ctrl.target.filter'
+        ng-change="ctrl.onChangeInternal(ctrl.target.target)"
+        placeholder="regex">
+      </input>
+    </div>
+    <div class="gf-form gf-form--grow">
+      <div class="gf-form-label gf-form-label--grow"></div>
+    </div>
+  </div>
+</query-editor-row>

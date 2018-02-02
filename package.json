@@ -1,0 +1,57 @@
+{
+  "name": "grafana-dynatrace-datasource",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Grafana datasource plugin for Dynatrace",
+  "main": "datasource.js",
+  "scripts": {
+    "build": "./node_modules/grunt-cli/bin/grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piotr1212/grafana-dynatrace-datasource.git"
+  },
+  "author": {
+    "name": "Piotr Popieluch"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/piotr1212/grafana-dynatrace-datasource/issues"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "chai": "~4.1.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "~7.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1",
+    "grunt-execute": "~0.2.2",
+    "grunt-mocha-test": "^0.13.2",
+    "grunt-systemjs-builder": "^1.0.0",
+    "jsdom": "~11.6.2",
+    "load-grunt-tasks": "^3.5.2",
+    "prunk": "^1.3.0",
+    "q": "^1.5.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-es2015-for-of": "^6.6.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "depcheck": "^0.6.8",
+    "grunt-jslint": "^1.1.15",
+    "lodash": "^4.17.4",
+    "mocha": "^5.0.0",
+    "yarn": "^1.3.2"
+  },
+  "homepage": "https://github.com/piotr1212/grafana-dynatrace-datasource"
+}
