@@ -1,6 +1,6 @@
 {
   "name": "Dynatrace",
-  "id": "piotr-dynatrace-datasource",
+  "id": "piotr1212-dynatrace-datasource",
   "type": "datasource",
 
   "partials": {
@@ -16,10 +16,6 @@
       "name": "Piotr Popieluch",
       "url": "https://github.com/piotr1212/grafana-dynatrace-datasource"
     },
-    "logos": {
-      "small": "img/simpleJson_logo.svg",
-      "large": "img/simpleJson_logo.svg"
-    },
     "links": [
       {"name": "GitHub", "url": "https://github.com/piotr1212"},
       {"name": "MIT License", "url": "https://github.com/piotr1212/grafana-dynatrace-datasource/blob/master/LICENSE"}
@@ -27,7 +23,6 @@
     "version": "1.0.0",
     "updated": "2018-02-14"
   },
-
   "dependencies": {
     "grafanaVersion": ">=3 <=5",
     "plugins": [ ]
