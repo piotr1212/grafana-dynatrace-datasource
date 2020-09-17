@@ -29,45 +29,18 @@ npm run build
 
 ## Building a custom Grafana image
 
-Checkout in `grafana-dynatrace-datasource`, create a `Dockerfile`:
-
-```
-FROM grafana/grafana:latest
-
-# Add dynatrace plugin source
-ADD grafana-dynatrace-datasource /var/lib/grafana/plugins/grafana-dynatrace-datasource
-
-USER root
-
-# Install prerequisites
-RUN apt-get update \
-    && apt-get install -y gnupg \
-    && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-    && apt-get install -y nodejs \
-    && npm install yarn -g
-
-# Change into the dynatrace plugin directory
-WORKDIR /var/lib/grafana/plugins/grafana-dynatrace-datasource
-
-# Install dependencies and build the dynatrace plugin
-RUN yarn install \
-    && npm run build \
-    && chown -R grafana:grafana /var/lib/grafana/plugins
-
-USER grafana
-
-WORKDIR /
-
-```
+Checkout in `grafana-dynatrace-datasource`
 
 Build and run:
 
 ```
+cd grafana-dynatrace-datasource
 docker build -t grafana:latest-with-plugins .
 docker run -d -p 3000:3000 grafana:latest-with-plugins
 ```
 
 ### Changelog
 
-1.0.0
+1.0.1
 - Initial release
+- Update Dockerfile to build with Grafana v7.0+
