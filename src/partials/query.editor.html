@@ -22,6 +22,15 @@
       </div>
     </div>
     <div class="gf-form">
+      <label ng-show='ctrl.target.aggregation === "PERCENTILE"' class="gf-form-label width-6 query-keyword">Percentile</label>
+      <input type="text" class="gf-form-input max-width-18"
+        ng-show='ctrl.target.aggregation === "PERCENTILE"'
+        ng-model='ctrl.target.percentile'
+        ng-change="ctrl.onChangeInternal(ctrl.target.target)"
+        placeholder="99">
+      </input>
+    </div>
+    <div class="gf-form">
       <label class="gf-form-label width-6 query-keyword">Filter</label>
       <input type="text" class="gf-form-input max-width-18"
         ng-model='ctrl.target.filter'
