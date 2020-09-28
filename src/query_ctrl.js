@@ -8,6 +8,7 @@ export default class DynatraceDatasourceQueryCtrl extends QueryCtrl {
     this.scope = $scope;
     this.target.target = this.target.target || 'select metric';
     this.target.aggregation = this.target.aggregation || 'select aggregation';
+    this.target.percentile = this.target.percentile || 'enter percentile(1 - 99)';
 
     this.target.detail = this.target.detail || {};
 

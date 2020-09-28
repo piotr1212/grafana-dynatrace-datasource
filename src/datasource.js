@@ -47,6 +47,9 @@ export default class DynatraceDatasource {
           timeseriesId: targets[t].target,
         },
       };
+      if (targets[t].aggregation === 'PERCENTILE') {
+        opts.data.percentile = targets[t].percentile;
+      }
       requests[t] = this.doRequest(opts);
     });
 
